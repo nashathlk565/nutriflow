@@ -3,6 +3,12 @@ pipeline {
 
     stages {
 
+        stage('Check Files') {
+            steps {
+                bat 'dir /s /b'
+            }
+        }
+
         stage('Install Dependencies') {
             steps {
                 dir('frontend') {
